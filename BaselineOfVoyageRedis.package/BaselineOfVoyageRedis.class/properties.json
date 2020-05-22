@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "CafeKrem 5/22/2020 10:34",
+	"super" : "BaselineOf",
+	"category" : "BaselineOfVoyageRedis",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "BaselineOfVoyageRedis",
+	"type" : "normal"
+}
