@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "VOWriteOperation",
+	"category" : "Voyage-Redis-Core-operation",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "VORedisRemoveAllOperation",
+	"type" : "normal"
+}

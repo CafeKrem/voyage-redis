@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "VOReadOperation",
+	"category" : "Voyage-Redis-Core-operation",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "VORedisCountOperation",
+	"type" : "normal"
+}

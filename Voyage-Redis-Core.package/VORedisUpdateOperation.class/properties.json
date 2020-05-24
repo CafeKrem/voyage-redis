@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "VOUpdateOperation",
+	"category" : "Voyage-Redis-Core-operation",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "VORedisUpdateOperation",
+	"type" : "normal"
+}

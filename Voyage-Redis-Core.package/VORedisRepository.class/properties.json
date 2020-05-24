@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "VOExternalRepository",
+	"category" : "Voyage-Redis-Core-base",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "VORedisRepository",
+	"type" : "normal"
+}
