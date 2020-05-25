@@ -3,8 +3,11 @@ baseline: spec
 	<baseline>
 	spec
 		for: #common
-		do: [ spec
+		do: [ "external dependency"
+			spec
 				baseline: 'RediStick'
 					with: [ spec repository: 'github://mumez/RediStick:master/repository' ];
 				baseline: 'Voyage'
-					with: [ spec repository: 'github://pharo-nosql/voyage' ] ]
+					with: [ spec repository: 'github://pharo-nosql/voyage' ];
+				package: 'Voyage-Redis-Core';
+				package: 'Voyage-Redis-Tests' ]
