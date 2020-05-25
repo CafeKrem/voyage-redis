@@ -5,7 +5,16 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"host",
+		"databaseName",
+		"port",
+		"username",
+		"password",
+		"pool",
+		"connectionTimeout",
+		"redisUrl"
+	],
 	"name" : "VORedisRepository",
 	"type" : "normal"
 }
