@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Voyage-Redis-Core-base",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"repository",
+		"blockClosure",
+		"retriesLeft"
+	],
+	"name" : "VORedisExecuteStrategy",
+	"type" : "normal"
+}

@@ -4,5 +4,5 @@ initializeRedisUrls: aCollectionOfUrls database: aDatabaseName username: aUserNa
 		databaseName: aDatabaseName;
 		redisUrl: aCollectionOfUrls;
 		username: aUserName;
-		password: aPassword
-		"initialize"
+		password: aPassword.
+	self initialize
