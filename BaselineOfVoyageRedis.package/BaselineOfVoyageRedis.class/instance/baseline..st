@@ -8,6 +8,6 @@ baseline: spec
 				baseline: 'RediStick'
 					with: [ spec repository: 'github://CafeKrem/RediStick:master/repository' ];
 				baseline: 'Voyage'
-					with: [ spec repository: 'github://pharo-nosql/voyage' ];
+					with: [ spec repository: 'github://zecke/voyage-stable:features-sdam2-n/mc' ];
 				package: 'Voyage-Redis-Core';
 				package: 'Voyage-Redis-Tests' ]
