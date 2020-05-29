@@ -1,4 +1,4 @@
 initialize
 initialize
 	super initialize.
-	"maybe to fill"
+	pool := RsRedisConnectionPool default

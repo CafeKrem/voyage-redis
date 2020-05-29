@@ -1,3 +1,3 @@
 accessing
 redisUrl: anObject
-	redisUrl := anObject
+	redisUrls := anObject

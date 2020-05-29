@@ -13,7 +13,7 @@
 		"password",
 		"pool",
 		"connectionTimeout",
-		"redisUrl"
+		"redisUrls"
 	],
 	"name" : "VORedisRepository",
 	"type" : "normal"
