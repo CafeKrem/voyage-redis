@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "VOExternalRepositoryTest",
+	"category" : "Voyage-Redis-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"RedisHost"
+	],
+	"instvars" : [
+		"repository"
+	],
+	"name" : "VORedisTest",
+	"type" : "normal"
+}
