@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "VORedisTest",
+	"category" : "Voyage-Redis-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "VORedisOperationTest",
+	"type" : "normal"
+}

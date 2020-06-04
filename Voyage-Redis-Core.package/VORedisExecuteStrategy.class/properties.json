@@ -7,8 +7,7 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"repository",
-		"blockClosure",
-		"retriesLeft"
+		"blockClosure"
 	],
 	"name" : "VORedisExecuteStrategy",
 	"type" : "normal"
