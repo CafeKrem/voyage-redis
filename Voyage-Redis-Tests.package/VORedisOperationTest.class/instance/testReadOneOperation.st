@@ -2,7 +2,7 @@ tests
 testReadOneOperation
 	| testPilotVincent testPilotRedXIII |
 	testPilotVincent := VOTestPilot new name: 'Vincent'.
-	testPilotVincent save inspect.
+	testPilotVincent save.
 	testPilotRedXIII := VOTestPilot new name: 'red_XIII'.
 	testPilotRedXIII save.
 	self

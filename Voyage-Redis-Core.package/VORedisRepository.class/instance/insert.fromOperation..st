@@ -3,15 +3,16 @@ insert: aSerializedObject fromOperation: aVORedisInsertOperation
 	"I will store in the redis database an association MyCLassName:InstanceID -> an Hash{version  ...} see
 https://redis.io/topics/data-types-intro hash section  "
 
-	| writeStream |
-	writeStream := WriteStream
-		with: (aSerializedObject at: '#instanceOf').
-	writeStream
+	| objectKey setKey |
+	setKey := WriteStream with: (aSerializedObject at: '#instanceOf').
+	setKey nextPutAll: self setIDsName.
+	objectKey := WriteStream with: (aSerializedObject at: '#instanceOf').
+	objectKey
 		nextPut: $:;
 		nextPutAll: aVORedisInsertOperation id.
 	pool
 		connectionDo: [ :aRedisWrapper | 
 			aRedisWrapper endpoint
-				hMSet: writeStream contents
-				dictionary: aSerializedObject ]
+				setJSONAt: objectKey contents putDictionary: aSerializedObject;
+				sAdd: setKey contents member: objectKey contents ]
 		at: databaseName
