@@ -7,7 +7,8 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"setName",
-		"iterator"
+		"iterator",
+		"repository"
 	],
 	"name" : "VOSet",
 	"type" : "normal"
