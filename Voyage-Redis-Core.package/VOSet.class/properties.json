@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "CafeKrem 6/17/2020 15:39",
+	"super" : "Object",
+	"category" : "Voyage-Redis-Core-utility",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"setName",
+		"iterator"
+	],
+	"name" : "VOSet",
+	"type" : "normal"
+}
