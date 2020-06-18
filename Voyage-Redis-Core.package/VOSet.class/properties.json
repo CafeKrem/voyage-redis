@@ -6,9 +6,9 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"setName",
 		"iterator",
-		"repository"
+		"repository",
+		"queryClass"
 	],
 	"name" : "VOSet",
 	"type" : "normal"

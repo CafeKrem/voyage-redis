@@ -1,3 +1,3 @@
 accessing
-setName: anObject
-	setName := anObject
+setName: aString
+	setName := aString

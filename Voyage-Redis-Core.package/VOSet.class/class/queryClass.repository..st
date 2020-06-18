@@ -1,6 +1,6 @@
 initialization
-setName: aSetName repository: aRepository
+queryClass: aSetName repository: aRepository
 	^ self basicNew
-		setName: aSetName;
+		queryClass: aSetName;
 		repository: aRepository;
 		initialize

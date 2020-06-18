@@ -1,3 +1,3 @@
 accessing
-redisRepository: anObject
-	redisRepository := anObject
+redisRepository: aVORedisRepository
+	redisRepository := aVORedisRepository

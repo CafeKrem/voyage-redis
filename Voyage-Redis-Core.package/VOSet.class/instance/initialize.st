@@ -1,4 +1,4 @@
 initialization
 initialize
 	super initialize.
-	iterator := VOSetIterator setName: setName repository: repository
+	iterator := VOSetIterator queryClass: queryClass repository: repository

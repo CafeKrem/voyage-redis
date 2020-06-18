@@ -2,5 +2,5 @@ running
 setUp
 	super setUp.
 	setIterator := VOSetIterator
-		setName: 'nullKey'
+		queryClass: Object
 		repository: repository
