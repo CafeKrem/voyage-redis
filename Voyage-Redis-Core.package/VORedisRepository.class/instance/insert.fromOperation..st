@@ -10,6 +10,9 @@ https://redis.io/topics/data-types-intro hash section  "
 	objectKey
 		nextPut: $:;
 		nextPutAll: aVORedisInsertOperation id.
+	aSerializedObject
+		at: self fieldRootId
+		put: aVORedisInsertOperation id.
 	pool
 		connectionDo: [ :aRedisWrapper | 
 			aRedisWrapper endpoint

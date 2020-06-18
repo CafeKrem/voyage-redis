@@ -6,5 +6,8 @@ testReadOneOperation
 	testPilotRedXIII := VOTestPilot new name: 'red_XIII'.
 	testPilotRedXIII save.
 	self
-		assert: (repository selectOne: VOTestPilot where: {('name' -> 'red_XIII')} asDictionary )
-		equals: testPilotRedXIII
+		assert:
+			(repository
+				selectOne: VOTestPilot
+				where: [ :anObject | anObject name = testPilotVincent name ]) name 
+		equals: testPilotVincent name
