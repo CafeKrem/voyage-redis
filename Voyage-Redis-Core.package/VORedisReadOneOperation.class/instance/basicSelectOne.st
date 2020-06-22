@@ -1,5 +1,3 @@
 persistence
 basicSelectOne
-	^ self repository pool
-		connectionDo: [ :aRedisWrapper | self detectWith: aRedisWrapper ]
-		at: self repository databaseName
+	^ (VOSet queryClass: queryClass repository: repository) detect: where
