@@ -1,5 +1,9 @@
 execution
 execute
+	"ugly !!!!!!!"
+	
 	(offset = 0 or: [ offset isNil ])
-		ifFalse: [ ^ self iterateOverRedisWithOffset ].
-	^ self iterateOverRedisWithoutOffset
+		ifTrue: [ limit ifNil: [ ^ self scanQueryClassNoLimitNoOffset: queryClass ].
+			^ self scanQueryClassNoOffset: queryClass ]
+		ifFalse: [ limit ifNil: [ ^ self sscanQueryClassNoLimit: queryClass ].
+			^ self sscanQueryClass: queryClass ]
