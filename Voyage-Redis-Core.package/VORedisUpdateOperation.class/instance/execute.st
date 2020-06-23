@@ -6,6 +6,9 @@ execute
 			repository pool
 				connectionDo: [ :aRedisWrapper | 
 					aRedisWrapper endpoint
-						setJSONAt: (repository getRedisKeyFromObject: serialized withID: id)
+						setJSONAt:
+							(repository
+								getRedisKeyFromObject: (serialized at: '#instanceOf')
+								withID: id)
 						putDictionary: serialized ]
 				at: repository databaseName ]

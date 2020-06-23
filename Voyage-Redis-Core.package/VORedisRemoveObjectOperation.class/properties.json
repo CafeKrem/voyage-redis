@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "VOWriteOperation",
+	"super" : "VORemoveObjectOperation",
 	"category" : "Voyage-Redis-Core-operation",
 	"classinstvars" : [ ],
 	"pools" : [ ],

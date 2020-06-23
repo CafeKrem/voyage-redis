@@ -1,8 +1,8 @@
 writting
-getRedisKeyFromObject: aSerializedObject withID: anID
+getRedisKeyFromObject: aClassName withID: anID
 	| objectKey |
-	objectKey := WriteStream with: (aSerializedObject at: '#instanceOf').
+	objectKey := WriteStream with: aClassName.
 	objectKey
 		nextPut: $:;
-		nextPutAll: anID .
+		nextPutAll: anID.
 	^ objectKey contents

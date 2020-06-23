@@ -6,7 +6,7 @@ https://redis.io/topics/data-types-intro hash section  "
 	| objectKey setKey |
 	setKey := self redisQueryClassSetName: aVORedisInsertOperation object class.
 	objectKey := self
-		getRedisKeyFromObject: aSerializedObject
+		getRedisKeyFromObject: (aSerializedObject at: '#instanceOf')
 		withID: aVORedisInsertOperation id.
 	aSerializedObject
 		at: self fieldRootId
