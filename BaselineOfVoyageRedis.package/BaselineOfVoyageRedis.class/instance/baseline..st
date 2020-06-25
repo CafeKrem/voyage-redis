@@ -6,7 +6,9 @@ baseline: spec
 		do: [ "external dependency"
 			spec
 				baseline: 'RediStick'
-					with: [ spec repository: 'github://CafeKrem/RediStick:master/repository' ];
+					with: [ spec
+						loads: #('ConnectionPool');
+						repository: 'github://CafeKrem/RediStick:AddReJSON/repository' ];
 				baseline: 'Voyage'
 					with: [ spec repository: 'github://pharo-nosql/voyage:master/mc' ];
 				package: 'Voyage-Redis-Core';
