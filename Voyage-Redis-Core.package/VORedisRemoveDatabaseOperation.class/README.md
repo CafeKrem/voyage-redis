@@ -1,0 +1,1 @@
+i'm implementing redis drop database
