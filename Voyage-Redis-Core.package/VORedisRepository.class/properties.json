@@ -1,14 +1,12 @@
 {
-	"commentStamp" : "",
+	"commentStamp" : "CafeKrem 6/26/2020 14:35",
 	"super" : "VOExternalRepository",
 	"category" : "Voyage-Redis-Core-base",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"host",
 		"databaseName",
-		"port",
 		"username",
 		"password",
 		"pool",

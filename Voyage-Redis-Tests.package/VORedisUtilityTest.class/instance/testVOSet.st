@@ -6,7 +6,7 @@ testVOSet
 	roger save.
 	bernard := VOTestPilot new name: 'Bernard'.
 	bernard save.
-	set := VOSet queryClass: roger class repository: repository.
+	set := VORedisSet queryClass: roger class repository: repository.
 	set do: [ :each | collectionTest add: each ].
 	self
 		assertCollection: (collectionTest collect: #name)

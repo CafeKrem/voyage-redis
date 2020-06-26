@@ -1,7 +1,7 @@
 as yet unclassified
 sscanQueryClass: aQueryClass
 	| objectDetected |
-	objectDetected := (VOSet
+	objectDetected := (VORedisSet
 		queryClass: aQueryClass
 		repository: repository) detect: where.
 	objectDetected ifNotNil: [ ^ objectDetected ].	"in case of readOneOperation I take the first occurence"

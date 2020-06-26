@@ -3,12 +3,11 @@ execute
 	repository
 		withNewVersionFor: self
 		do: [ serialized at: repository fieldRootId put: id.
-			repository pool
-				connectionDo: [ :aRedisWrapper | 
+			repository
+				executeRedisCommand: [ :aRedisWrapper | 
 					aRedisWrapper endpoint
 						setJSONAt:
 							(repository
-								getRedisKeyFromObject: (serialized at: '#instanceOf')
-								withID: id)
-						putDictionary: serialized ]
-				at: repository databaseName ]
+								redisQueryClassName: (serialized at: '#instanceOf')
+								ID: id)
+						putDictionary: serialized ] ]

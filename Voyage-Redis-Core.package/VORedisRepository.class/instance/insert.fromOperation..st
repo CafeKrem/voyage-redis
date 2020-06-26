@@ -4,16 +4,16 @@ insert: aSerializedObject fromOperation: aVORedisInsertOperation
 https://redis.io/topics/data-types-intro hash section  "
 
 	| objectKey setKey |
-	setKey := self redisQueryClassSetName: aVORedisInsertOperation object class.
+	setKey := self
+		redisQueryClassSetName: aVORedisInsertOperation object class.
 	objectKey := self
-		getRedisKeyFromObject: (aSerializedObject at: '#instanceOf')
-		withID: aVORedisInsertOperation id.
+		redisQueryClassName: (aSerializedObject at: '#instanceOf')
+		ID: aVORedisInsertOperation id.
 	aSerializedObject
 		at: self fieldRootId
 		put: aVORedisInsertOperation id.
 	pool
-		connectionDo: [ :aRedisWrapper | 
+		executeRedisCommand: [ :aRedisWrapper | 
 			aRedisWrapper endpoint
 				setJSONAt: objectKey putDictionary: aSerializedObject;
 				sAdd: setKey member: objectKey ]
-		at: databaseName

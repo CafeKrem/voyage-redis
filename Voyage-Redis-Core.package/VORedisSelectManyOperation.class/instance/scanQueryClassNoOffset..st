@@ -2,7 +2,7 @@ as yet unclassified
 scanQueryClassNoOffset: aQueryClass
 	| collection |
 	collection := OrderedCollection new.
-	(VOSet queryClass: aQueryClass repository: repository)
+	(VORedisSet queryClass: aQueryClass repository: repository)
 		do: [ :each | 
 			limitCounter >= limit
 				ifTrue: [ ^ collection ].

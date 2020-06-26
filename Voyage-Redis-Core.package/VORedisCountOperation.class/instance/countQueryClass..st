@@ -1,11 +1,11 @@
 running
 countQueryClass: aQueryClass
+	"recursive fonction to compute each aQueryClass and it's subclasses in redis"
 	| count |
-	repository pool
-		connectionDo: [ :aRedisWrapper | 
+	repository
+		executeRedisCommand: [ :aRedisWrapper | 
 			count := aRedisWrapper endpoint
 				sCard: (repository redisQueryClassSetName: aQueryClass).
 			aQueryClass
-				subclassesDo: [ :subclass | count := count + (self countQueryClass: subclass) ] ]
-		at: repository databaseName.
+				subclassesDo: [ :subclass | count := count + (self countQueryClass: subclass) ] ].
 	^ count

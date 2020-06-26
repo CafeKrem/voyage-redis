@@ -1,6 +1,6 @@
 running
 setUp
 	super setUp.
-	setIterator := VOSetIterator
+	setIterator := VORedisSetIterator
 		queryClass: Object
 		repository: repository

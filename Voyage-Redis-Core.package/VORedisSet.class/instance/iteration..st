@@ -14,6 +14,5 @@ iteration: aBlock
 								serialized:
 									(NeoJSONReader
 										fromString:
-											(repository pool
-												connectionDo: [ :aRedisWrapper | aRedisWrapper endpoint getJSONAt: each ]
-												at: repository databaseName)) ]) ]
+											(repository
+												executeRedisCommand: [ :aRedisWrapper | aRedisWrapper endpoint getJSONAt: each ])) ]) ]

@@ -5,11 +5,9 @@ tearDown
 	"self repository dropDatabase"
 
 	super tearDown.
-	self repository pool
-		connectionDo: [ :aRedisWrapper | aRedisWrapper endpoint flushAll ]
-		at: self repository databaseName.
-	"(VOTestObject allSubclasses
+	self repository executeRedisCommand: [ :aRedisWrapper | aRedisWrapper endpoint flushAll ].
+	(VOTestObject allSubclasses
 		collect: [ :each | each persistentClass ]
 		as: Set) do: [ :each | repository removeAll: each ].
 	Smalltalk garbageCollect.
-	self waitForWriteOperation"
+	self waitForWriteOperation
