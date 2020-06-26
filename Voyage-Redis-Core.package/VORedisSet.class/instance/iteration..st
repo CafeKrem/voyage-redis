@@ -2,9 +2,8 @@ private-enumeration
 iteration: aBlock
 	"iterator next return a collection"
 
-	iterator reset.
-	[ iterator hasNext ]
-		whileTrue: [ aBlock
+	self
+		internalIteration: [ aBlock
 				value:
 					(iterator next
 						collect: [ :each | 
