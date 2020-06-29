@@ -1,5 +1,6 @@
-as yet unclassified
+private
 objectWithClass: aClass andId: aString
+	"return : an instance of aClass store in redis with key"
 	^ self
 		retrieveQueriedInstanceOf: aClass
 		serialized:
