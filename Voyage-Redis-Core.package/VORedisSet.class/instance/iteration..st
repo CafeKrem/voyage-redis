@@ -5,13 +5,13 @@ iteration: aBlock
 	self
 		internalIteration: [ aBlock
 				value:
-					(iterator next
+					((iterator next
 						collect: [ :each | 
 							"transform collection of key into pharo object"
-							self repository
-								retrieveQueriedInstanceOf: queryClass
-								serialized:
-									(NeoJSONReader
-										fromString:
-											(repository
-												executeRedisCommand: [ :aRedisWrapper | aRedisWrapper endpoint getJSONAt: each ])) ]) ]
+							| result |
+							result := self getJSONObject: each.
+							result
+								ifNotNil: [ result := self repository
+										retrieveQueriedInstanceOf: queryClass
+										serialized: (NeoJSONReader fromString: result) ].
+							result ]) reject: #isNil) ]
