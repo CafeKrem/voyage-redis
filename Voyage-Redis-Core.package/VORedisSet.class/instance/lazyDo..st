@@ -1,6 +1,6 @@
-enumeration
+enumarating-redisKey
 lazyDo: aBlockClosure
-	"aBlockClosure have a redis key as argument"
+	"lazyDo: [:aRedisKey | ... ] will iterate on redis key without resolving key reference"
 
 	^ self
 		lazyIteration: [ :aCollection | aCollection do: aBlockClosure ]

@@ -1,4 +1,4 @@
-API
+enumerating-object
 count: aBlockClosure
 	| counter |
 	counter := 0.

@@ -1,4 +1,4 @@
-enumerating
+enumerating-object
 detect: aBlock
 	self
 		do: [ :each | 

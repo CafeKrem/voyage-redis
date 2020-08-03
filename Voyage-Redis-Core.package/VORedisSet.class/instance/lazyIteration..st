@@ -1,5 +1,6 @@
 private-enumeration
 lazyIteration: aBlock
-	"a lazy iteration iterate only on set without downloading the object"
+	"this method will iter on a Collection of redis key"
+	"iterator next will return aSetOf('MyClassStoreInRedis:HisID' , ...)"
 
 	self internalIteration: [ aBlock value: iterator next ]
