@@ -1,4 +1,4 @@
-as yet unclassified
+private
 sscanQueryClassNoLimit: aQueryClass
 	| collection |
 	collection := OrderedCollection new.

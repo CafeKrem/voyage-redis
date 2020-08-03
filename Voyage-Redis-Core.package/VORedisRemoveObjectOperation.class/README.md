@@ -1,0 +1,1 @@
+My job is to remove object in redis database.
