@@ -1,7 +1,5 @@
 execution
 execute
-	self flag: #warning.
-	^ blockClosure value
-	"
+	^ blockClosure 
 		on: Error
-		do: [ :error | self logError: error ]"
+		do: [ :error | self logError: error ]

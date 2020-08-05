@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "CafeKrem 6/30/2020 12:10",
+	"super" : "VOContainer",
+	"category" : "Voyage-Redis-Core-base",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "VORedisContainer",
+	"type" : "normal"
+}

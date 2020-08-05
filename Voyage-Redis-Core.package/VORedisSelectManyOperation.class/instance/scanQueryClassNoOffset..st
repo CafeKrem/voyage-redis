@@ -1,4 +1,4 @@
-as yet unclassified
+private
 scanQueryClassNoOffset: aQueryClass
 	| collection |
 	collection := OrderedCollection new.

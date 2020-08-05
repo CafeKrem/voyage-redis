@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "CafeKrem 6/30/2020 11:06",
+	"super" : "VOJSONSerializer",
+	"category" : "Voyage-Redis-Core-base",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "VORedisJSONSerializer",
+	"type" : "normal"
+}

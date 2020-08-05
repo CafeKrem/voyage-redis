@@ -1,6 +1,6 @@
 operations
 basicInsert
-	"I will store in the redis database an association MyCLassName:InstanceID -> an Hash{version  ...} see
+	"I will store in the redis database an association MyCLassNam Unknown input at end ->e Unknown input at end ->:InstanceID -> an Hash{version  ...} see
 https://redis.io/topics/data-types-intro hash section  "
 
 	| objectKey setKey |
@@ -13,4 +13,6 @@ https://redis.io/topics/data-types-intro hash section  "
 		executeRedisCommand: [ :aRedisWrapper | 
 			aRedisWrapper endpoint
 				setJSONAt: objectKey putDictionary: serialized;
-				sAdd: setKey member: objectKey ]
+				sAdd: setKey member: objectKey.
+			ttl
+				ifNotNil: [ aRedisWrapper endpoint expire: objectKey seconds: ttl ] ]

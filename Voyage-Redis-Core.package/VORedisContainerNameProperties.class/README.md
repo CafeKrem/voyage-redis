@@ -1,0 +1,1 @@
+I'm like a C macro , I will just return hardCoded value 

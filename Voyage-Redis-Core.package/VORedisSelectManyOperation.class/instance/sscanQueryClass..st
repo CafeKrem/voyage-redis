@@ -1,4 +1,4 @@
-as yet unclassified
+private
 sscanQueryClass: aQueryClass
 	| collection |
 	collection := OrderedCollection new.

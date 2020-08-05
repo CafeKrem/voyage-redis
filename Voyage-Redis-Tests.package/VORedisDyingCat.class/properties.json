@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "CafeKrem 6/30/2020 12:19",
+	"super" : "VOTestCat",
+	"category" : "Voyage-Redis-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "VORedisDyingCat",
+	"type" : "normal"
+}

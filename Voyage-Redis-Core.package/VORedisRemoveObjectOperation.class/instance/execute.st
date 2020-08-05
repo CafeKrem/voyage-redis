@@ -1,10 +1,9 @@
 execution
 execute
-	| objectID jsonKey |
-	objectID := repository keyOf: object.
+	| jsonKey |
 	jsonKey := repository
 		redisQueryClassName: object className
-		ID: objectID.
+		ID: (repository keyOf: object).
 	repository
 		executeRedisCommand: [ :aRedisWrapper | 
 			aRedisWrapper endpoint

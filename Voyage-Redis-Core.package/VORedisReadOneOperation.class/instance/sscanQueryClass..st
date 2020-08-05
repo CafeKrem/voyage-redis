@@ -1,4 +1,4 @@
-as yet unclassified
+execution
 sscanQueryClass: aQueryClass
 	| objectDetected |
 	objectDetected := (VORedisSet

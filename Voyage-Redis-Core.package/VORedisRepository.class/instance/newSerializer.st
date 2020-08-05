@@ -1,3 +1,3 @@
 private
 newSerializer 
-	^ VOJSONSerializer repository: self
+	^ VORedisJSONSerializer repository: self

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "CafeKrem 7/31/2020 15:12",
+	"super" : "PackageManifest",
+	"category" : "Voyage-Redis-Core-base",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ManifestVoyageRedis",
+	"type" : "normal"
+}

@@ -1,6 +1,6 @@
 running
 countQueryClass: aQueryClass
-	"recursive fonction to compute each aQueryClass and it's subclasses in redis"
+	"recursive fonction to compute each aQueryClass and his subclasses"
 	| count |
 	repository
 		executeRedisCommand: [ :aRedisWrapper | 
