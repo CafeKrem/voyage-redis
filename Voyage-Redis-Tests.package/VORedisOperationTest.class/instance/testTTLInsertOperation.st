@@ -1,5 +1,5 @@
 tests
-testTTL
+testTTLInsertOperation
 	| cat |
 	cat := VORedisDyingCat new name: 'Bastet'.
 	cat save.
