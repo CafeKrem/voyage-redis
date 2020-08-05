@@ -1,5 +1,6 @@
 running
 setUpRepository
+	RsRedisConnectionPool initialize.
 	repository := VORedisRepository
 		host: self class redisHost
 		database: 'Voyage-Tests'.
