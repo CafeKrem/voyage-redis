@@ -1,3 +1,4 @@
 accessing
-connectionTimeout: anObject
-	connectionTimeout := anObject
+connectionTimeout: anInteger
+	connectionTimeout := anInteger.
+	pool connectionTimeout: anInteger 
