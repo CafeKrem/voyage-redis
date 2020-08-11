@@ -3,6 +3,9 @@ setUpRepository
 	RsRedisConnectionPool initialize.
 	repository := VORedisRepository
 		host: self class redisHost
-		database: 'Voyage-Tests'.
+		port: VORedisRepository defaultPort
+		database: 'Voyage-Tests'
+		username: nil
+		password: self goodPassword.
 	repository debug: true.
 	VORepository setRepository: repository
