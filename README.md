@@ -19,7 +19,7 @@ without docker:
 
 look at https://oss.redislabs.com/redisjson/ 
 
-### play with 
+### run it  
 
 in order to try you can use class from test class and look at test for more information it can help you.
 
@@ -60,6 +60,18 @@ VOTestPilot selectOne: [:each | each name = 'John']
 ```
 voRedisRepositoryInstance executeRedisCommand: [:aRsRedis | aRsRedis endpoint seeMethodInRsRedisEndpoint. aRsRedis endpoint unifiedCommand: {#GET . 'aKey'}]
 ```
+
+## implementation 
+
+few word about implementation , in order to store object in redis , I decided to use 2 redis data structure :
+
+1- a redis JSON data type who store JSON ,  when voyage serialize an object it transform it into a pharo collection like a JSON. 
+2- a set , use to store reference to instance of MyObjectStoreInRedis
+
+### typo 
+
+1- 'MyObjectStoreInRedis:<IDOfInstance>'
+2- 'MyObjectStoreInRedis:setIDs'
 
 ## dependency 
 
