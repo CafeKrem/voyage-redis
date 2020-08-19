@@ -8,7 +8,7 @@ baseline: spec
 				baseline: 'RediStick'
 					with: [ spec
 						loads: #('ConnectionPool');
-						repository: 'github://CafeKrem/RediStick:addReJSONCommadn/repository' ];
+						repository: 'github://CafeKrem/RediStick:dev/repository' ];
 				baseline: 'Voyage'
 					with: [ spec repository: 'github://CafeKrem/voyage:add-feature-redisTTL/mc' ];
 				package: 'Voyage-Redis-Core';
