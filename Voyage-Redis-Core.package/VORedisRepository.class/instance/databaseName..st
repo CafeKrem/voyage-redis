@@ -1,3 +1,3 @@
 accessing
-databaseName: anObject
-	databaseName := anObject
+databaseName: aString
+	databaseName := aString

@@ -1,7 +1,3 @@
-!!!!!!!!!!! WARNING !!!!!!!!!!
-in order to use me you must have a ReJSON redis database
-see https://oss.redislabs.com/redisjson/ 
-!!!!!!!!!!! END WARNING !!!!!!
 I'm a Voyage repository who can persist on redis databases.
 
 Public API and Key Messages
@@ -19,20 +15,17 @@ Public API and Key Messages
 Internal Representation and Key Implementation Points.
 
     Instance Variables
-	connectionTimeout:		<Object>
 	databaseName:		<String>
 	password:		<Object>
-	pool:		<RsConnectionPool> via this connectionPool all operation are doing his request 
+	pool:		<RsConnectionPool> the connectionPool manage connection and send our requests 
 	redisUrls:		<Object>
 	username:		<Object>
 
 
     Implementation Points
 
-in redis we store Object as JSON string 
-the serialiser product a dictionary that we convert it as JSON string in order to store it in redis.
-
+when we want to save an Object we transform it into a Collection organised like a JSON data.
 so in redis we use 2 data structure: 
 
-* ReJSON data type , that containing a JSON value containing Object information , see https://oss.redislabs.com/redisjson/ for more information 
+* ReJSON data type , use to store Object information as JSON format ,  https://oss.redislabs.com/redisjson/ for more information 
 * a redis set , https://redis.io/topics/data-types-intro#redis-sets

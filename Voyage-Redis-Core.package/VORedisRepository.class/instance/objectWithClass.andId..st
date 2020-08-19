@@ -8,5 +8,7 @@ objectWithClass: aClass andId: aString
 				fromString:
 					(self
 						executeRedisCommand: [ :aRedisWrapper | 
+							self halt.
+							self flag: 'need to extends RsRedisEndpoint'.
 							aRedisWrapper endpoint
 								getJSONAt: (self redisQueryClassName: aClass name ID: aString) ]))

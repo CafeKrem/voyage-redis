@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "CafeKrem 6/26/2020 14:35",
+	"commentStamp" : "CafeKrem 8/19/2020 16:00",
 	"super" : "VOExternalRepository",
 	"category" : "Voyage-Redis-Core-base",
 	"classinstvars" : [ ],
@@ -10,7 +10,6 @@
 		"username",
 		"password",
 		"pool",
-		"connectionTimeout",
 		"redisUrls"
 	],
 	"name" : "VORedisRepository",
