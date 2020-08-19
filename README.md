@@ -12,7 +12,7 @@ you can run this script With Docker.
 ```bash 
 docker run -p 6379:6379 
 -v /your/Absolute/Path/To/redis.conf:/etc/redis/redis.conf 
-redis-server /etc/redis/redis.conf
+redislabs/rejson /etc/redis/redis.conf
 ```
 
 without docker: 
