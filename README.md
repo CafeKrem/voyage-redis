@@ -66,11 +66,13 @@ voRedisRepositoryInstance executeRedisCommand: [:aRsRedis | aRsRedis endpoint se
 few word about implementation , in order to store object in redis , I decided to use 2 redis data structure :
 
 1- a redis JSON data type who store JSON ,  when voyage serialize an object it transform it into a pharo collection like a JSON. 
+
 2- a set , use to store reference to instance of MyObjectStoreInRedis
 
 ### typo 
 
 1- 'MyObjectStoreInRedis:<IDOfInstance>'
+
 2- 'MyObjectStoreInRedis:setIDs'
 
 ## dependency 
