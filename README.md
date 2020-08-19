@@ -61,6 +61,18 @@ VOTestPilot selectOne: [:each | each name = 'John']
 voRedisRepositoryInstance executeRedisCommand: [:aRsRedis | aRsRedis endpoint seeMethodInRsRedisEndpoint. aRsRedis endpoint unifiedCommand: {#GET . 'aKey'}]
 ```
 
+##### adding TTL information  
+
+you can add description to your object you just have to define a method like this:
+
+```smalltalk
+MyObjectStore class >> #myMethod
+<redisContainer>
+	^ VORedisContainer new
+		ttlDuration: 1;
+		yourself
+```
+
 ## implementation 
 
 few word about implementation , in order to store object in redis , I decided to use 2 redis data structure :
