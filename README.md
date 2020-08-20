@@ -1,5 +1,12 @@
 # voyage-redis 
- implementation of a redis driver for voyage framework (no-sql framework) 
+ implementation of a redis driver for voyage framework (no-sql framework).
+ 
+ ## author 
+ 
+ ### CafeKrem
+ 
+ I'm work on this project during my internship for my first year of master degree. 
+ please if you have advice , better ideas for code quality , or anything that can upgrade code quality , please tell me. 
 
 ## HOW TO 
 
