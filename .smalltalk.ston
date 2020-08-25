@@ -5,10 +5,9 @@ SmalltalkCISpec {
       #onConflict : #useIncoming,
       #onUpgrade : #useIncoming,
       #ignoreImage : true
-    },
+      }
+    ],
     #testing : {
       #packages : [ 'VoyageRedis.*' ]
     }
-  }
-  ]
 }
