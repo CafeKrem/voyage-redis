@@ -14,4 +14,5 @@ services:
   - docker
 
 before_install:
+  - docker pull redislabs/rejson
   - docker run -p 6379:6379  redislabs/rejson --requirepass goodPassword --loadmodule /usr/lib/redis/modules/rejson.so
