@@ -14,11 +14,9 @@ matrix:
   fast_finish: true
   
 services:
-  #- docker
-  - redis-server
+  - docker
 
 before_install:
-  #- docker pull redislabs/rejson
-  #- docker run -d -p 127.0.0.1:6379:6379 -v redis.conf:/etc/redis/redis.conf redislabs/rejson /etc/redis/redis.conf & 
-  #- docker ps -a
-  - sudo ./runRedisServer.sh 
+  - docker pull redislabs/rejson
+  - docker run -d -p 127.0.0.1:6379:6379 -v redis.conf:/etc/redis/redis.conf redislabs/rejson /etc/redis/redis.conf & 
+  - docker ps -a
