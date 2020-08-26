@@ -5,9 +5,8 @@ execute
 		do: [ serialized at: repository fieldRootId put: id.
 			repository
 				executeRedisCommand: [ :aRedisWrapper | 
-					aRedisWrapper endpoint
+					repository
 						setJSONAt:
-							(repository
-								redisQueryClassName: (serialized at: '#instanceOf')
-								ID: id)
-						putDictionary: serialized ] ]
+							(repository redisQueryClassName: (serialized at: '#instanceOf') ID: id)
+						putDictionary: serialized
+						wrapper: aRedisWrapper ] ]

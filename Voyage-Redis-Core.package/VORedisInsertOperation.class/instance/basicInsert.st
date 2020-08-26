@@ -11,8 +11,7 @@ https://redis.io/topics/data-types-intro hash section  "
 	serialized at: repository fieldRootId put: self id.
 	repository
 		executeRedisCommand: [ :aRedisWrapper | 
-			aRedisWrapper endpoint
-				setJSONAt: objectKey putDictionary: serialized;
-				sAdd: setKey member: objectKey.
+			repository setJSONAt: objectKey putDictionary: serialized wrapper: aRedisWrapper.
+			aRedisWrapper endpoint sAdd: setKey member: objectKey.
 			ttl
 				ifNotNil: [ aRedisWrapper endpoint expire: objectKey seconds: ttl ] ]
