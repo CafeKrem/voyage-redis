@@ -15,5 +15,5 @@ services:
 
 before_install:
   - docker pull redislabs/rejson
-  - docker run -d -p 127.0.0.1:6379:6379 -v redis.conf:/etc/redis/redis.conf redislabs/rejson /etc/redis/redis.conf & 
+  - docker run -d -p 127.0.0.1:6379:6379 redislabs/rejson --requirepass goodPassword &
   - docker ps -a
