@@ -1,3 +1,3 @@
 execution
 execute
-	repository execute: [ self basicSave ]
+	repository withNewVersionFor: self do: [ self basicInsert ]

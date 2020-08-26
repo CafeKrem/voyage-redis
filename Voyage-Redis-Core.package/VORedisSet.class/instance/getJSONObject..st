@@ -6,9 +6,8 @@ getJSONObject: anObjectKey
 
 	| result |
 	repository
-		executeRedisCommand: [ :aRedisWrapper | 
-			result := aRedisWrapper endpoint getJSONAt: anObjectKey.
-			self flag: 'need to extends RsRedis'.
+		executeRedisCommand: [ :aRsRedis | 
+			result := repository getJSONAt: anObjectKey wrapper: aRsRedis.
 			"if result is nil it's mean that the TTL object has expired"
-			result ifNil: [ self removeFromSet: anObjectKey throught: aRedisWrapper ] ].
+			result ifNil: [ self removeFromSet: anObjectKey wrapper: aRsRedis ] ].
 	^ result

@@ -8,6 +8,6 @@ execute
 		executeRedisCommand: [ :aRedisWrapper | 
 			aRedisWrapper endpoint
 				atomic: [ aRedisWrapper endpoint
-						removeJSONAt: jsonKey;
+						del: jsonKey;
 						sRem: (repository redisQueryClassSetName: object class)
 							member: jsonKey ] ]
