@@ -8,7 +8,7 @@ objectWithClass: aClass andId: aString
 			(NeoJSONReader
 				fromString:
 					(self
-						executeRedisCommand: [ :aRedisWrapper | 
+						executeRedisCommand: [ :aRsRedis | 
 							self
 								getJSONAt: (self redisQueryClassName: aClass name ID: aString)
-								wrapper: aRedisWrapper ]))
+								wrapper: aRsRedis ]))

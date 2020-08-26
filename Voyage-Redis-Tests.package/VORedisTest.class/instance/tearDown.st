@@ -5,7 +5,7 @@ tearDown
 	"self repository dropDatabase"
 
 	super tearDown.
-	self repository executeRedisCommand: [ :aRedisWrapper | aRedisWrapper endpoint flushAll ].
+	self repository executeRedisCommand: [ :aRsRedis | aRsRedis endpoint flushAll ].
 	(VOTestObject allSubclasses
 		collect: [ :each | each persistentClass ]
 		as: Set) do: [ :each | repository removeAll: each ].

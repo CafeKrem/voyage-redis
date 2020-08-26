@@ -12,16 +12,16 @@ testRedisBasicSave
 	self
 		assert:
 			(repository
-				executeRedisCommand: [ :aRedisWrapper | aRedisWrapper endpoint exists: voTestPilotSetKey ]);
+				executeRedisCommand: [ :aRsRedis | aRsRedis endpoint exists: voTestPilotSetKey ]);
 		assert:
 			(repository
-				executeRedisCommand: [ :aRedisWrapper | aRedisWrapper endpoint type: voTestPilotSetKey ])
+				executeRedisCommand: [ :aRsRedis | aRsRedis endpoint type: voTestPilotSetKey ])
 			equals: 'set'.
 	self
 		assert:
 			(repository
-				executeRedisCommand: [ :aRedisWrapper | aRedisWrapper endpoint exists: wizardKey ]);
+				executeRedisCommand: [ :aRsRedis | aRsRedis endpoint exists: wizardKey ]);
 		assert:
 			(repository
-				executeRedisCommand: [ :aRedisWrapper | aRedisWrapper endpoint type: wizardKey ])
+				executeRedisCommand: [ :aRsRedis | aRsRedis endpoint type: wizardKey ])
 			equals: 'ReJSON-RL'

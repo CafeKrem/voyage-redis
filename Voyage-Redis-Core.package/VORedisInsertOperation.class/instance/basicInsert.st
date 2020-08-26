@@ -10,8 +10,8 @@ https://redis.io/topics/data-types-intro hash section  "
 		ID: self id.
 	serialized at: repository fieldRootId put: self id.
 	repository
-		executeRedisCommand: [ :aRedisWrapper | 
-			repository setJSONAt: objectKey putDictionary: serialized wrapper: aRedisWrapper.
-			aRedisWrapper endpoint sAdd: setKey member: objectKey.
+		executeRedisCommand: [ :aRsRedis | 
+			repository setJSONAt: objectKey putDictionary: serialized wrapper: aRsRedis.
+			aRsRedis endpoint sAdd: setKey member: objectKey.
 			ttl
-				ifNotNil: [ aRedisWrapper endpoint expire: objectKey seconds: ttl ] ]
+				ifNotNil: [ aRsRedis endpoint expire: objectKey seconds: ttl ] ]

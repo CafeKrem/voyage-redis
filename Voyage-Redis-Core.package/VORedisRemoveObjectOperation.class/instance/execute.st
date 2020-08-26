@@ -5,9 +5,9 @@ execute
 		redisQueryClassName: object className
 		ID: (repository keyOf: object).
 	repository
-		executeRedisCommand: [ :aRedisWrapper | 
-			aRedisWrapper endpoint
-				atomic: [ aRedisWrapper endpoint
+		executeRedisCommand: [ :aRsRedis | 
+			aRsRedis endpoint
+				atomic: [ aRsRedis endpoint
 						del: jsonKey;
 						sRem: (repository redisQueryClassSetName: object class)
 							member: jsonKey ] ]

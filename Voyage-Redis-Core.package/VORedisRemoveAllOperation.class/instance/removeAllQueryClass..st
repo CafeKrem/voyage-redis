@@ -1,9 +1,9 @@
 running
 removeAllQueryClass: aClass
 	repository
-		executeRedisCommand: [ :aRedisWrapper | 
+		executeRedisCommand: [ :aRsRedis | 
 			(VORedisSet queryClass: aClass repository: repository)
-				lazyDo: [ :each | aRedisWrapper del: each ].
-			aRedisWrapper endpoint del: (repository redisQueryClassSetName: aClass) ].
+				lazyDo: [ :each | aRsRedis del: each ].
+			aRsRedis endpoint del: (repository redisQueryClassSetName: aClass) ].
 	aClass
 		subclassesDo: [ :subclass | self removeAllQueryClass: subclass ]

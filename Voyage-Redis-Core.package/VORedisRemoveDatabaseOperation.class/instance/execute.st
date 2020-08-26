@@ -1,4 +1,4 @@
 execution
 execute
 	repository
-		executeRedisCommand: [ :aRedisWrapper | aRedisWrapper flushDb ]
+		executeRedisCommand: [ :aRsRedis | aRsRedis flushDb ]
