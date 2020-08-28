@@ -1,6 +1,10 @@
 # voyage-redis  [![Build Status](https://travis-ci.org/CafeKrem/voyage-redis.svg?branch=master)](https://travis-ci.org/CafeKrem/voyage-redis)
  implementation of a redis driver for voyage framework (no-sql framework).
  
+ ## CI 
+ 
+ the CI is running on Pharo 7 & 8. for Pharo 9 there is a baseline error 
+ 
  ## author 
  
  ### CafeKrem
