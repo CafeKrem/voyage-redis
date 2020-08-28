@@ -8,7 +8,7 @@ os:
 
 smalltalk:
   - Pharo64-8.0
-  - Pharo64-9.0
+  #- Pharo64-9.0 there is a baseline error in pharo 9 
   - Pharo64-7.0
   
 services:
