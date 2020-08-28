@@ -9,6 +9,7 @@ os:
 smalltalk:
   - Pharo64-8.0
   - Pharo64-9.0
+  - Pharo64-7.0
   
 services:
   - docker
