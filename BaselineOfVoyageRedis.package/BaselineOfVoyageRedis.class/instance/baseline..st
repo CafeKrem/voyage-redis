@@ -7,7 +7,7 @@ baseline: spec
 				baseline: 'RediStick'
 					with: [ spec
 						loads: #('ConnectionPool');
-						repository: 'github://CafeKrem/RediStick:branchToCI/repository' ];"it will change it's for running on CI"
+						repository: 'github://mumez/RediStick:develop/repository' ];
 				baseline: 'Voyage'
 					with:
 						[ spec repository: 'github://CafeKrem/voyage:add-feature-redisTTL/mc' ];
